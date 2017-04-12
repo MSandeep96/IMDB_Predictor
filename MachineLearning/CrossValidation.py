@@ -10,6 +10,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import SGDClassifier
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import BaggingClassifier
 
 models = []
 models.append(("Log Reg",LogisticRegression()))
@@ -20,6 +22,8 @@ models.append(("Decision Tree",DecisionTreeClassifier()))
 models.append(("SVC",NuSVC()))
 models.append(("RandomForestClassifier",RandomForestClassifier(n_estimators=200)))
 models.append(("Gradient Decent",SGDClassifier()))
+models.append(("AdaBoost",AdaBoostClassifier(n_estimators=200)))
+models.append(("Bagging",BaggingClassifier(n_estimators=200)))
 
 for name, model in models:
 	kfold = KFold(n_splits=10, random_state=7)
