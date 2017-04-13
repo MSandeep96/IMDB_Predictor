@@ -1,0 +1,19 @@
+{
+  "name": "imdb_predictor",
+  "version": "1.0.0",
+  "description": "Predict IMDB scores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSandeep96/IMDB_Predictor.git"
+  },
+  "author": "Sandeep Reddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MSandeep96/IMDB_Predictor/issues"
+  },
+  "homepage": "https://github.com/MSandeep96/IMDB_Predictor#readme"
+}
