@@ -39,7 +39,7 @@ categorical_fts.append(content_rating_pos)
 X = df.iloc[:, :-1].values
 
 # ORIGINAL RATING :Last column array, string of length 6 (dtype)
-Y_Org = np.asarray(df.iloc[:, df.shape[1]-1], dtype="|S6") #numpy is moody
+Y_Org = np.asarray(df.iloc[:, df.shape[1]-1], dtype="|S6")
 Y_OrgI = Y_Org.astype(np.float)
 # REDUCE RATINGS TO DOMAINS
 dicer = np.vectorize(reduceRatings)
