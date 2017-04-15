@@ -14,13 +14,13 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.ensemble import BaggingClassifier
 
 models = []
-models.append(("Log Reg",LogisticRegression()))
+models.append(("Logistic Reg",LogisticRegression()))
 models.append(("Linear Disc",LinearDiscriminantAnalysis()))
 models.append(("KNeighbours",KNeighborsClassifier()))
 models.append(("GaussianNB",GaussianNB()))
 models.append(("Decision Tree",DecisionTreeClassifier()))
 models.append(("SVC",SVC()))
-models.append(("RandomForestClassifier",RandomForestClassifier(n_estimators=200))
+models.append(("RandomForestClassifier",RandomForestClassifier(n_estimators=200)))
 models.append(("Gradient Descent",SGDClassifier()))
 models.append(("AdaBoost",AdaBoostClassifier(n_estimators=200, random_state=0)))
 models.append(("Bagging",BaggingClassifier(n_estimators=200)))

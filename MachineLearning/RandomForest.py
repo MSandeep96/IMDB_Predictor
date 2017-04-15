@@ -3,6 +3,7 @@ from RFESelection import *
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
+import cPickle
 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Ystr, test_size = 0.15, random_state = 0)
 
@@ -11,6 +12,9 @@ classifier = RandomForestClassifier(n_estimators=200, criterion='entropy', rando
 									class_weight='balanced', n_jobs=-1)
 
 classifier.fit(X_train, Y_train.ravel())
+
+#with open('MyClassifier.pkl', 'wb') as fid:
+#    cPickle.dump(classifier, fid)
 
 # Predicting the Test set results
 Y_pred = classifier.predict(X_test)
